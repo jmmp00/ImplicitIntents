@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/edittext_uri"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edittext_uri" />
+
+        <Button
+            android:id="@+id/button_uri"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#54A5D1"
+            android:text="@string/button_uri"
+            android:onClick="openWebsite"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/edittext_loc"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edittext_loc" />
+
+        <Button
+            android:id="@+id/button_loc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#54A5D1"
+            android:text="@string/button_loc"
+            android:onClick="openLocation"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/edittext_share"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edittext_share" />
+
+        <Button
+            android:id="@+id/button_share"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#54A5D1"
+            android:text="@string/button_share"
+            android:onClick="shareText"
+            android:textColor="#000000" />
+    </LinearLayout>
