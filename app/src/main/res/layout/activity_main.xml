@@ -70,4 +70,14 @@
             android:text="@string/button_share"
             android:onClick="shareText"
             android:textColor="#000000" />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#54A4D0"
+            android:text="@string/button_camera_text"
+            android:onClick="openCamera"
+            android:textColor="#000000" />
+</LinearLayout>

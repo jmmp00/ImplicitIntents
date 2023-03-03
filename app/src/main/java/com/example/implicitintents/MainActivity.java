@@ -1,10 +1,15 @@
 package com.example.implicitintents;
 
+import static androidx.core.content.PackageManagerCompat.LOG_TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ShareCompat;
+
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText mWebsiteEditText;
     private EditText mLocationEditText;
     private EditText mShareEditText;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final String LOG_TAG =
+            MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,5 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 .setChooserTitle("Share this text with: ")
                 .setText(txt)
                 .startChooser();
+    }
+
+    public void openCamera(View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        } catch (ActivityNotFoundException e) {
+            Log.e(LOG_TAG, "could not take picture");
+        }
     }
 }

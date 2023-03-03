@@ -6,4 +6,5 @@
     <string name="button_loc">Open Location</string>
     <string name="edittext_share">\'Twas brilling and the slithy toves</string>
     <string name="button_share">Share This Text</string>
+    <string name="button_camera_text">Take a Picture!</string>
 </resources>
